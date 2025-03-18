@@ -200,6 +200,16 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true, desc = 'Move the current line up' })
 vim.keymap.set('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true, desc = 'Move the current line up' })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'typst',
+  command = 'setlocal makeprg=typst\\ compile\\ %',
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'c',
+  command = 'setlocal makeprg=gcc\\ -o\\ %:r\\ %',
+})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
