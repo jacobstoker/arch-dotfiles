@@ -5,19 +5,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+. "$HOME/.cargo/env"
+. "$HOME/.local/bin/env"
+eval "$(starship init bash)"
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-# PS1='[\u@\h \W]\$ '
-PS1='(\u) \w $ '
-
-. "$HOME/.cargo/env"
-
-alias ll='ls -l'
-alias zed='zeditor'
-
-. "$HOME/.local/bin/env"
-
-eval "$(starship init bash)"
+alias ll='lsd -l'
+alias lll='lsd -la'
+alias audio-monitor='wpctl set-default 58'
+alias audio-headphones='wpctl set-default 36'
 
 touchb() {
     if [[ -z "$1" ]]; then
@@ -41,6 +38,3 @@ EOF
     chmod +x "$script_name"
     echo "Created '$script_name'" 
 }
-
-alias audio-monitor='wpctl set-default 58'
-alias audio-headphones='wpctl set-default 36'
