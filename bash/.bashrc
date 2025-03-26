@@ -8,6 +8,7 @@
 . "$HOME/.cargo/env"
 . "$HOME/.local/bin/env"
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
