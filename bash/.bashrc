@@ -16,6 +16,7 @@ alias ll='lsd -l'
 alias lll='lsd -la'
 alias audio-monitor='wpctl set-default 58'
 alias audio-headphones='wpctl set-default 36'
+alias dotfiles='cd ~/dotfiles/'
 
 touchb() {
     if [[ -z "$1" ]]; then
