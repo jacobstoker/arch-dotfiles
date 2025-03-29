@@ -10,6 +10,7 @@
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
+export EDITOR=nvim
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='lsd -l'
