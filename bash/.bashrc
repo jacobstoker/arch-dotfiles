@@ -18,6 +18,8 @@ alias lll='lsd -la'
 alias audio-monitor='wpctl set-default 58'
 alias audio-headphones='wpctl set-default 36'
 alias dotfiles='cd ~/dotfiles/'
+alias cf='cp ~/dotfiles/.clang-format .'
+alias ct='cp ~/dotfiles/.clang-tidy .'
 
 touchb() {
     if [[ -z "$1" ]]; then
