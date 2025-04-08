@@ -11,6 +11,7 @@ eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
 export EDITOR=nvim
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='lsd -l'
@@ -20,6 +21,9 @@ alias audio-headphones='wpctl set-default 36'
 alias dotfiles='cd ~/dotfiles/'
 alias cf='cp ~/dotfiles/.clang-format .'
 alias ct='cp ~/dotfiles/.clang-tidy .'
+alias gsim='rlwrap tclsh'
+alias prj='cd ~/Projects'
+alias lg='lazygit'
 
 touchb() {
     if [[ -z "$1" ]]; then
@@ -42,4 +46,13 @@ EOF
 
     chmod +x "$script_name"
     echo "Created '$script_name'" 
+}
+
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
