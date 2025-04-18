@@ -56,3 +56,5 @@ function y() {
     fi
     rm -f -- "$tmp"
 }
+
+export STM32_PRG_PATH=/home/jacob/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
