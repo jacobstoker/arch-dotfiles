@@ -24,6 +24,7 @@ alias ct='cp ~/dotfiles/.clang-tidy .'
 alias gsim='rlwrap tclsh'
 alias prj='cd ~/Projects'
 alias lg='lazygit'
+alias ..='cd ..'
 
 touchb() {
     if [[ -z "$1" ]]; then
