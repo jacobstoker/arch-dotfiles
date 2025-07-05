@@ -1,0 +1,55 @@
+* {
+  background-image: none;
+  font-family: "JetBrainsMonoNL Nerd Font Mono";
+  font-size: 14px;
+}
+
+window {
+  background-color: #1a1b26
+}
+
+button {
+  color: #ffffff;
+  background-color: #414868; /*1e1e1e;*/
+  border-style: solid;
+  border-width: 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button:focus,
+button:active,
+button:hover {
+  background-color: #a9b1d6;
+  outline-style: none;
+}
+
+#lock {
+  background-image: url("/usr/share/wleave/icons/lock.svg"),
+    url("/usr/local/share/wleave/icons/lock.svg");
+}
+
+#logout {
+  background-image: url("/usr/share/wleave/icons/logout.svg"),
+    url("/usr/local/share/wleave/icons/logout.svg");
+}
+
+#suspend {
+  background-image: url("/usr/share/wleave/icons/suspend.svg"),
+    url("/usr/local/share/wleave/icons/suspend.svg");
+}
+
+#hibernate {
+  background-image: url("/usr/share/wleave/icons/hibernate.svg"),
+    url("/usr/local/share/wleave/icons/hibernate.svg");
+}
+
+#shutdown {
+  background-image: url("/usr/share/wleave/icons/shutdown.svg"),
+    url("/usr/local/share/wleave/icons/shutdown.svg");
+}
+
+#reboot {
+  background-image: url("/usr/share/wleave/icons/reboot.svg"),
+    url("/usr/local/share/wleave/icons/reboot.svg");
+}
